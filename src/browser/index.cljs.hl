@@ -51,7 +51,7 @@
     (div
      (div :class "filters"
       (map (partial filter-attribute cardsc filtersc) (sort first (seq d/attributes))))
-     (loop-tpl :bindings [card (vec cardsc)]
+     (loop-tpl :bindings [card (vec cardsc)] :size 10
       (div :on-click (move-card card cards dest)
        (text "~{card}"))))))
 
